@@ -1,0 +1,4 @@
+flask
+newsapi-python
+webargs
+Flask-JSON
