@@ -2,20 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>News Home</title>
+    <link rel="stylesheet" href="css/NewsCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/home.js"></script>
 </head>
 <body>
     <header>
-        <h1>Title</h1>
+        <h1>News Collector Name</h1>
     </header>
+    <div class="divider"></div>
     <main>
-        <ul>
-            <li>Stuff</li>
-            <li>Goes</li>
-            <li>Here</li>
-        </ul>        
+        <p>  Searching multiple websites and allowing for in-depth search customization, News Site Name allows
+            users to get informed on multiple topics, all while being given the most reputable sources! </p>
+        <br>
+        <form id="search_form">
+            <br>
+            <label for="search_query">  Your Search Term:  </label>
+            <input id="search_query" type="text" name="search_query">
+            <br><br>
+            <select>
+                <option value="any">Any</option>
+                <option value="politics">Politics</option>
+                <option value="sports">Sports</option>
+                <option value="entertainment">Entertainment</option>
+            </select>
+            <br>
+            <label>
+                <input type="checkbox" id="sorted" name="sorted" checked="true"> Show latest first
+            </label>
+        </form>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <h2 id="results_title">Results</h2>
+        <br>
+        <div id="results">
+            
+        </div>
+        <div id="page_div">
+            <div id="inner_page_div">
+                <button id="prev">⇐ prev</button>
+                <button id="next">next ⇒</button>
+            </div>
+        </div>
     </main>
+
 </body>
 </html>

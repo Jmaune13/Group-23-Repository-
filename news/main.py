@@ -50,6 +50,7 @@ def get_news_api():
         "to-date": fields.Str(required=False),
         "category": fields.Str(required=False),
         "lang": fields.Str(required=False),
+        "page": fields.Int(required=False),
     })
 @as_json_p
 def get_news(args):
@@ -59,13 +60,15 @@ def get_news(args):
     sort = args["sort"] if "sort" in args else "relevance"
     q = args["q"] if "q" in args else ""
     lang = args["lang"] if "lang" in args else "en"
+    page = args["page"] if "page" in args else 0
 
     newsapi = get_news_api()
 
     return newsapi.get_top_headlines(
             q=q,
             sources='bbc-news,the-verge,associated-press',
-            language=lang)
+            language=lang,
+            page=max(page + 1, 1))
 
 category_options = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
 

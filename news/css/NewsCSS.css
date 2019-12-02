@@ -23,3 +23,38 @@ form {
 h2 {
     text-align: center;
 }
+
+#results {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#page_div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#inner_page_div {
+    display: flex;
+}
+
+#page_div button {
+    width: 50%;
+}
+
+#results h3 {
+    text-align: center
+}
+
+#results img {
+    width: 100%;
+}
+
+#results p {
+    width: 100%;
+}
+
+a.item {
+    color: inherit;
+    text-decoration: inherit; /* no underline */
+}
